@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="drop-down-menu.js"></script>
+    <script src="drop-down-menu.js" defer></script>
     <style>
         nav > ul {
             display: flex;
@@ -15,6 +15,9 @@
 
         .sub-menu{
             display:none;
+        }
+        .show {
+            display:block;
         }
     </style>
 </head>
@@ -38,5 +41,6 @@
             </ul>
         </nav>
     </header>
+    <input type="text" id="search" value="Test" placeholder="Type here...">
 </body>
 </html>
