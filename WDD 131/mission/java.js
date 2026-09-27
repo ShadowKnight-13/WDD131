@@ -5,12 +5,7 @@ let logo = document.querySelector('img');
 selectElem.addEventListener('change', changeTheme);
 
 function changeTheme() {
-    let current = selectElem.value;
-    if (current == 'dark') {
-        // code for changes to colors and logo
-
-    } else {
-        // code for changes to colors and logo
-    }
-}           
-                    
+    let isDark = selectElem.value === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+    logo.src = isDark ? 'images/byui-logo-white.png' : 'images/byui-logo-blue.webp';
+}
