@@ -34,5 +34,14 @@ function addIndex(){
     scriptureElements.forEach(renderNum)
 }
 
+document.querySelector(".menu-btn").addEventListener("click", togglemenu)
+
+function togglemenu(){
+    const menu = document.querySelector(".menu")
+    menu.classList.toggle("open")
+}
+
+
+
 addIndex()
 displayWelcome()
