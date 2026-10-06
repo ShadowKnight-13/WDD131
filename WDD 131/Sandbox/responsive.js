@@ -37,11 +37,15 @@ function addIndex(){
 document.querySelector(".menu-btn").addEventListener("click", togglemenu)
 
 function togglemenu(){
-    const menu = document.querySelector(".menu")
-    menu.classList.toggle("open")
+    navEL.classList.toggle("hide")
+    menuBtn.classList.toggle("change")
 }
 
 
 
 addIndex()
 displayWelcome()
+
+const menuBtn = document.querySelector(".menu-btn")
+const navEL = document.querySelector("main-nav")
+menuBtn.addEventListener("click", togglemenu);
