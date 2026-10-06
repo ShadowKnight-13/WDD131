@@ -75,7 +75,7 @@ footer {
     nav a {
     padding: 10px;
     }
-    nav{
+    nav.main-nav{
         display: block;
     }
     .menu-btn {
