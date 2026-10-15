@@ -2,17 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <title>Document</title>
-
-    <stlye>
-        a {
-            font_size: 3em;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 | Course Pages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 2rem auto;
+            max-width: 48rem;
+            padding: 0 1rem;
         }
-    </stlye>
+        h1, h2 {
+            line-height: 1.2;
+        }
+        a {
+            font-size: 1.1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-    <a href="Alvey/index.html">Alvey Practice</a>
-
+    <header>
+        <h1>WDD 131 Course Pages</h1>
+        <p>Browse the projects and practice pages in this repository.</p>
+    </header>
+    <main>
+        <section aria-labelledby="projects-heading">
+            <h2 id="projects-heading">Projects</h2>
+            <ul>
+                <li><a href="coolpics/index.html">Cool Pics photo gallery</a></li>
+                <li><a href="mission/index.html">BYU-Idaho mission statement</a></li>
+            </ul>
+        </section>
+        <section aria-labelledby="practice-heading">
+            <h2 id="practice-heading">Practice Pages</h2>
+            <ul>
+                <li><a href="ALvey/index.html">Alvey HTML and CSS practice</a></li>
+                <li><a href="Sandbox/week1.html">Week 1</a></li>
+                <li><a href="Sandbox/responsive.html">Responsive design scriptures</a></li>
+                <li><a href="Sandbox/modal.html">Image gallery modal</a></li>
+                <li><a href="Sandbox/drop-down-menu.html">Drop-down menu demo</a></li>
+            </ul>
+        </section>
+    </main>
 </body>
 </html>
