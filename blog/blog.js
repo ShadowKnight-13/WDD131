@@ -53,7 +53,7 @@ function articleTemplate(article) {
 	</div>
 	<div class="details">
 		<h2>${article.title}</h2>
-		<img src="${article.imgSrc}" alt="${article.imgAlt}">
+		<img src="${article.imgSrc}" alt="${article.imgAlt}" referrerpolicy="no-referrer">
 		<p>${article.description}</p>
 	</div>
 </article>`;
