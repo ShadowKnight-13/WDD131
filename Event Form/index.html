@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticket</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%9F%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+    <link rel="stylesheet" href="eventForm.css" />
+    <script src="eventForm.js" defer></script>
+</head>
+<body>
+    <main class="wrapper">
+      <h1>Event Ticket</h1>
+
+      <form id="eventForm" novalidate>
+        <div class="field">
+          <label for="firstName">First Name</label>
+          <input id="firstName" name="firstName" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input id="lastName" name="lastName" type="text" required />
+        </div>
+
+        <div class="field full">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="field">
+          <label for="ticketType">Type</label>
+          <select id="ticketType" name="ticketType" aria-controls="codeContainer" required>
+            <option value="">Choose one</option>
+            <option value="Student">Student</option>
+            <option value="Guest">Guest</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="eventDate">Event Date</label>
+          <input id="eventDate" name="eventDate" type="date" required />
+        </div>
+
+        <div class="field full hidden" id="codeContainer">
+          <label for="code" id="codeLabel">Code</label>
+          <input id="code" name="code" type="text" />
+        </div>
+
+        <div class="field full">
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+
+      <div id="errors" class="errors" role="alert"></div>
+      <div id="ticket" class="ticket hidden"></div>
+    </main>
+</body>
+</html>
