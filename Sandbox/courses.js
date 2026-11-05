@@ -7,8 +7,35 @@ const aCourse = {
         { sectionNum: 1, roomNum: 'STC 353', enrolled: 26, days: 'TTh', instructor: 'Bro T'},
         { sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A'}
     ],
+
+    enrollStudent: function(num) {
+        // get the section that has sectionNum = num
+        const theSection = this.sections.find(section=> section.sectionNum === num)
+
+        //increment enroll
+        console.log(theSection)
+        console.log(theSection.enrolled)
+        theSection.enrolled ++
+        console.log(theSection.enrolled)
+    },
+
+    dropStudent: function(num) {
+        // get the section that has sectionNum = num
+        const theSection = this.sections.find(section=> section.sectionNum === num)
+
+        //increment enroll
+        console.log(theSection)
+        console.log(theSection.enrolled)
+        theSection.enrolled --
+        console.log(theSection.enrolled)
+    },
+
     logo: 'images/js-logo.png'
+
 };
+
+
+
 
 console.log(aCourse.sections[0].enrolled)
 
@@ -21,9 +48,8 @@ function selectedCourse(course){
 }
 
 function sectionTemplate(section){
-    return 
-    `
-     <tr>
+    return`
+        <tr>
           <td>${section.sectionNum}</td>
           <td>${section.roomNum}</td>
           <td>${section.enrolled}</td>
@@ -42,6 +68,17 @@ function setSections(sections){
 
 
 
-
 selectedCourse(aCourse);
 setSections(aCourse.sections);
+
+function enrollHandler(ev){
+    console.log(ev.target)
+    if (ev.target.id === "#enrollStudent"){
+        enrollOrDrop()
+        pass
+    }
+
+}
+
+document.querySelector("#enrollStudent").addEventListener("click",enrollHandler)
+document.querySelector("#dropStudent").addEventListener("click",enrollHandler)
