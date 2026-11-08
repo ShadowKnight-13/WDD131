@@ -8,26 +8,20 @@ const aCourse = {
         { sectionNum: 2, roomNum: 'STC 347', enrolled: 28, days: 'TTh', instructor: 'Sis A'}
     ],
 
-    enrollStudent: function(num) {
-        // get the section that has sectionNum = num
-        const theSection = this.sections.find(section=> section.sectionNum === num)
-
-        //increment enroll
-        console.log(theSection)
-        console.log(theSection.enrolled)
-        theSection.enrolled ++
-        console.log(theSection.enrolled)
+    enrollStudent: function(sectionNum) {
+        const sectionIndex = this.sections.findIndex(section => section.sectionNum === Number(sectionNum));
+        if (sectionIndex !== -1) {
+            this.sections[sectionIndex].enrolled++;
+            renderSections(this.sections);
+        }
     },
 
-    dropStudent: function(num) {
-        // get the section that has sectionNum = num
-        const theSection = this.sections.find(section=> section.sectionNum === num)
-
-        //increment enroll
-        console.log(theSection)
-        console.log(theSection.enrolled)
-        theSection.enrolled --
-        console.log(theSection.enrolled)
+    dropStudent: function(sectionNum) {
+        const sectionIndex = this.sections.findIndex(section => section.sectionNum === Number(sectionNum));
+        if (sectionIndex !== -1) {
+            this.sections[sectionIndex].enrolled--;
+            renderSections(this.sections);
+        }
     },
 
     logo: 'images/js-logo.png'
@@ -36,8 +30,6 @@ const aCourse = {
 
 
 
-
-console.log(aCourse.sections[0].enrolled)
 
 function selectedCourse(course){
    const courseName = document.querySelector("#courseName");
@@ -59,26 +51,24 @@ function sectionTemplate(section){
     `
 }
 
-function setSections(sections){
+function renderSections(sections){
     const sectionsEl = document.querySelector("#sections");
 
     const html = sections.map(sectionTemplate)
-    sectionsEl.innerhtml = html.join('');
+    sectionsEl.innerHTML = html.join('');
 }
 
 
 
 selectedCourse(aCourse);
-setSections(aCourse.sections);
+renderSections(aCourse.sections);
 
-function enrollHandler(ev){
-    console.log(ev.target)
-    if (ev.target.id === "#enrollStudent"){
-        enrollOrDrop()
-        pass
-    }
+document.querySelector("#enrollStudent").addEventListener("click", () => {
+    const sectionNum = document.querySelector("#sectionNumber").value;
+    aCourse.enrollStudent(sectionNum);
+});
 
-}
-
-document.querySelector("#enrollStudent").addEventListener("click",enrollHandler)
-document.querySelector("#dropStudent").addEventListener("click",enrollHandler)
+document.querySelector("#dropStudent").addEventListener("click", () => {
+    const sectionNum = document.querySelector("#sectionNumber").value;
+    aCourse.dropStudent(sectionNum);
+});
