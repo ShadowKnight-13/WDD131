@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover a simple and delicious apple crisp recipe in RecipeBook.">
+    <title>RecipeBook | Apple Crisp</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RecipeBook | Apple Crisp">
+    <meta property="og:description" content="Discover a simple and delicious apple crisp recipe in RecipeBook.">
+    <meta property="og:url" content="https://shadowknight-13.github.io/WDD131/recipes/">
+    <meta property="og:image" content="https://shadowknight-13.github.io/WDD131/recipes/images/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Apple crisp served with vanilla ice cream beside the RecipeBook logo.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RecipeBook | Apple Crisp">
+    <meta name="twitter:description" content="Discover a simple and delicious apple crisp recipe in RecipeBook.">
+    <meta name="twitter:image" content="https://shadowknight-13.github.io/WDD131/recipes/images/social-preview.jpg">
+    <meta name="twitter:image:alt" content="Apple crisp served with vanilla ice cream beside the RecipeBook logo.">
+
+    <link rel="icon" href="images/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="recipes.css">
+</head>
+<body>
+    <header class="site-header">
+        <img src="images/recipe-book.png" alt="" width="90" height="90">
+        <h1>RecipeBook</h1>
+    </header>
+
+    <main>
+        <form class="search" role="search">
+            <label class="visually-hidden" for="recipe-search">Find a recipe</label>
+            <input id="recipe-search" type="search" name="search" placeholder="Find a recipe">
+            <button type="submit" aria-label="Search">
+                <img src="images/search.svg" alt="" width="32" height="32">
+            </button>
+        </form>
+
+        <article class="recipe">
+            <img class="recipe-image" src="images/apple-crisp.jpg" alt="Apple crisp served with vanilla ice cream" width="750" height="563">
+            <div class="recipe-details">
+                <span class="recipe-tag">dessert</span>
+                <h2>Apple Crisp</h2>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">★</span>
+                    <span aria-hidden="true" class="icon-star">★</span>
+                    <span aria-hidden="true" class="icon-star">★</span>
+                    <span aria-hidden="true" class="icon-star">★</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <a class="attribution" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+            <a href="#" aria-label="Instagram"><img src="images/instagram_icon.svg" alt="" width="32" height="32"></a>
+            <a href="#" aria-label="YouTube"><img src="images/youtube_icon.svg" alt="" width="32" height="32"></a>
+            <a href="#" aria-label="Pinterest"><img src="images/pinterest_icon.svg" alt="" width="32" height="32"></a>
+        </div>
+    </footer>
+</body>
+</html>
