@@ -84,12 +84,15 @@ const hikes = [
   }
 
   function searchList(list,q){
-    function searchCallback(string){
-        return string.toLowerCase().includes(q.toLowerCase());
+    function searchCallback(hike){
+        return hike.name.toLowerCase().includes(q.toLowerCase()) ||
+        hike.description.toLowerCase().includes(q.toLowerCase()) ||
+        hike.tags.some(tag=> tag.toLowerCase().includes(q.toLowerCase())
+      );
     }
-    const filterdList = list.filter(searchCallback);
-    return filterdList
+    const filteredList = list.filter(searchCallback);
+    return filteredList;
   }
 
-  const filtered = searchList(simpleList,"b");
+  const filtered = searchList(hikes,"mod");
   console.log(filtered);
