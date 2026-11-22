@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover a simple and delicious apple crisp recipe in RecipeBook.">
-    <title>RecipeBook | Apple Crisp</title>
+    <meta name="description" content="Search RecipeBook for delicious recipes by name, description, or tag.">
+    <title>RecipeBook | Find a Recipe</title>
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="RecipeBook | Apple Crisp">
-    <meta property="og:description" content="Discover a simple and delicious apple crisp recipe in RecipeBook.">
+    <meta property="og:title" content="RecipeBook | Find a Recipe">
+    <meta property="og:description" content="Search RecipeBook for delicious recipes by name, description, or tag.">
     <meta property="og:url" content="https://shadowknight-13.github.io/WDD131/recipes/">
     <meta property="og:image" content="https://shadowknight-13.github.io/WDD131/recipes/images/social-preview.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Apple crisp served with vanilla ice cream beside the RecipeBook logo.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RecipeBook | Apple Crisp">
-    <meta name="twitter:description" content="Discover a simple and delicious apple crisp recipe in RecipeBook.">
+    <meta name="twitter:title" content="RecipeBook | Find a Recipe">
+    <meta name="twitter:description" content="Search RecipeBook for delicious recipes by name, description, or tag.">
     <meta name="twitter:image" content="https://shadowknight-13.github.io/WDD131/recipes/images/social-preview.jpg">
     <meta name="twitter:image:alt" content="Apple crisp served with vanilla ice cream beside the RecipeBook logo.">
 
@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -42,21 +43,8 @@
             </button>
         </form>
 
-        <article class="recipe">
-            <img class="recipe-image" src="images/apple-crisp.jpg" alt="Apple crisp served with vanilla ice cream" width="750" height="563">
-            <div class="recipe-details">
-                <span class="recipe-tag">dessert</span>
-                <h2>Apple Crisp</h2>
-                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                    <span aria-hidden="true" class="icon-star">★</span>
-                    <span aria-hidden="true" class="icon-star">★</span>
-                    <span aria-hidden="true" class="icon-star">★</span>
-                    <span aria-hidden="true" class="icon-star">★</span>
-                    <span aria-hidden="true" class="icon-star-empty">☆</span>
-                </span>
-                <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream.</p>
-            </div>
-        </article>
+        <p class="results-status" aria-live="polite"></p>
+        <section class="recipes" aria-label="Recipes"></section>
     </main>
 
     <footer>

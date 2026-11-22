@@ -70,6 +70,25 @@ h1 {
     border-radius: 5px;
 }
 
+.recipes {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.results-status {
+    margin: 0 0 1rem;
+}
+
+.results-status:empty {
+    display: none;
+}
+
+.recipe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
 .recipe-image {
     display: block;
     width: 100%;
@@ -100,6 +119,14 @@ h2 {
 
 .description {
     display: none;
+}
+
+.no-results {
+    margin: 0;
+    padding: 2rem;
+    border: 2px solid #222;
+    border-radius: 5px;
+    text-align: center;
 }
 
 footer {
