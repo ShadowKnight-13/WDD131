@@ -1,0 +1,179 @@
+<html lang="en-us"><head>
+		<meta charset="utf-8">
+		<title>Site Plan</title>
+		<link type="text/css" rel="stylesheet" href="site-plan.css">
+	</head>
+
+	<body>
+		<header>
+			<h1>[Nemesis Forge] Project Plan</h1>
+			<h2>Parker Dragovich</h2>
+			<h2>WDD 131</h2>
+			<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+		</header>
+		<main>
+			
+			<hr>
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>To help GM's for TTRPGs create and manage a dynamic army of followers for villains and to surport a unique type of campaign.</p>
+			<!-- change this -->
+
+			<h3>Audience</h3>
+			<p>GM's for TTRPGs like Dnd or pathfinder.</p>
+			<!-- change this -->
+
+			<h3>Dynamic elements</h3>
+			<p>This program will help users generate generals, commanders, or villains of intrest within an orginzation. Not only will this program help with names, but also with weaknesses, stregths, fears, relationships, goals, ect.</p>
+			<!-- change this -->
+
+			<hr>
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+			<img src="images/exec-615ced39-e47f-406c-9620-46bb15d00aee.png" alt="Logo image">
+			<hr>
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a href="https://coolors.co/17151c-332b3d-f4ebdd-b83a4b-d6a84f" target="_blank">https://coolors.co/17151c-332b3d-f4ebdd-b83a4b-d6a84f</a>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">[#17151C]</td>
+						<td class="secondary">[#332B3D]</td>
+						<td class="accent1">[#B83A4B]</td>
+						<td class="accent2">[#D6A84F]</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				Start the application
+
+				Store organizations and army members in arrays of objects
+
+				Display the default organization and its members
+
+				When the user selects an organization:
+				    Update the organization name and description
+				    Display only members belonging to that organization
+				    Update the organization statistics
+
+				When the user clicks Generate Member:
+				    Randomly choose a role
+				    Randomly choose a name
+				    Randomly choose strengths, weaknesses, fears, and goals
+				    Create a new member object
+				    Add the member to the roster
+				    Display the new member
+
+				When the user searches for a member:
+				    Compare the search text with member names and roles
+				    Display matching members
+
+				When the user selects a filter:
+				    If the filter is "Active":
+				        Display only active members
+				    If the filter is "Defeated":
+				        Display only defeated members
+				    Otherwise:
+				        Display all matching members
+
+				When the user clicks a member card:
+				    Display that member's complete details
+
+				When the user changes a member's status:
+				    Update the member object
+				    Recalculate the organization statistics
+				    Refresh the roster display
+			</p>
+
+			<h3>Wireframes</h3>
+			<pre class="wireframe">┌──────────────────────────────────────────────────────────────┐
+│  [Logo] THE LIVING ARMY                 [Help] [About]       │
+├───────────────┬──────────────────────────────┬───────────────┤
+│ ORGANIZATION  │ SELECTED MEMBER              │ ARMY OVERVIEW │
+│               │                              │               │
+│ Ashen Choir   │ Veyra the Pale               │ Total: 12     │
+│ [Select ▼]    │ Lieutenant                   │ Active: 8     │
+│               │                              │ Defeated: 3   │
+│ Description   │ Strengths                    │               │
+│               │ Weaknesses                   │ Danger Level  │
+│ [Generate]    │ Fears and Goals              │ High          │
+│               │ Relationships                │               │
+│               │ [Change Status ▼]            │               │
+├───────────────┴──────────────────────────────┴───────────────┤
+│ ARMY ROSTER                                                  │
+│ [Search members...] [Role ▼] [Status ▼]                      │
+│ [Member Card] [Member Card] [Member Card] [Member Card]      │
+└──────────────────────────────────────────────────────────────┘
+
+┌────────────────────────┐
+│ [Logo]                 │
+│ THE LIVING ARMY        │
+│ [Menu]                 │
+├────────────────────────┤
+│ ORGANIZATION           │
+│ [Ashen Choir ▼]        │
+│ Short description      │
+│ [Generate Member]      │
+├────────────────────────┤
+│ SEARCH AND FILTER      │
+│ [Search...]            │
+│ [Role ▼] [Status ▼]    │
+├────────────────────────┤
+│ SELECTED MEMBER        │
+│ Veyra the Pale         │
+│ Lieutenant             │
+│                        │
+│ Strengths              │
+│ Weaknesses             │
+│ Fears                  │
+│ Goals                  │
+│ [Change Status ▼]      │
+├────────────────────────┤
+│ ARMY OVERVIEW          │
+│ Total: 12              │
+│ Active: 8              │
+│ Defeated: 3            │
+├────────────────────────┤
+│ ARMY ROSTER            │
+│ [Member Card]          │
+│ [Member Card]          │
+│ [Member Card]          │
+└────────────────────────┘</pre>
+
+			<!-- <h3>Landing page</h3>
+			<p>
+				[Any additional details about home that the wireframe does not make
+				clear]
+			</p>
+			<img src="#" alt="home page wireframe">
+
+			<h3>[Page 2 if needed]</h3>
+			<p>
+				[Any additional details about page 2 that the wireframe does not make
+				clear]
+			</p>
+			<img src="#" alt="page 2 wireframe"> -->
+		</main>
+	
+
+</body></html>
